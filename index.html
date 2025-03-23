@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('bg1.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        header, .banner, .features, footer {
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+        }
+
+        .feature {
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            width: 90%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            background-color: #FFA500; /* Orange */
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #CC8400; /* Darker Orange */
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="logo">
+            <img src="PPHS_logo.png" alt="Poorna Prajna High School Logo">
+        </div>
+        <h1>Poorna Prajna High School</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="staff.html">Staff</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="contact-info">
+            <span>Email: info@poornaprajana.edu</span><br>
+            <span>Call: +91 1234 567 890</span>
+        </div>
+    </header>
+    
+    <section class="banner container">
+        <div class="banner-content">
+            <h1>Welcome to Poorna Prajna High School</h1>
+            <p>A place where knowledge and excellence meet.</p>
+            <a href="online_admit.html" class="btn">Online Admission</a>
+        </div>
+    </section>
+    
+    <section class="features container">
+        <div class="feature">
+            <h3>Certified Teachers</h3>
+            <p>Highly qualified and experienced teachers for better learning.</p>
+        </div>
+        <div class="feature">
+            <h3>Special Education</h3>
+            <p>Providing inclusive education for all students.</p>
+        </div>
+        <div class="feature">
+            <h3>Library & Books</h3>
+            <p>A vast collection of books to enhance knowledge.</p>
+        </div>
+        <div class="feature">
+            <h3>Sports & Clubs</h3>
+            <p>Encouraging students in extracurricular activities.</p>
+        </div>
+    </section>
+    
+    <footer class="container">
+        <p>&copy; 2025 Poorna Prajna High School. All rights reserved.</p>
+    </footer>
+</body>
+</html>
 
