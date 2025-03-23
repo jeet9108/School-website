@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('bg1.png'); /* Background Image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Orange Submit Button */
+        button {
+            background-color: #ff9800;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #e68900;
+        }
+
+        .confirmation {
+            display: none;
+        }
+
+        .btn-home {
+            background-color: #007bff;
+            margin-top: 10px;
+        }
+
+        .btn-home:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container" id="admissionForm">
+        <h2>Online Admission Form</h2>
+        <form id="admissionFormElement">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <select id="gender">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="date" id="dob" required>
+            <input type="text" id="motherTongue" placeholder="Mother Tongue" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="form-container confirmation" id="confirmation">
+        <h2>Form Submitted Successfully!</h2>
+        <p>Thank you for your admission application.</p>
+        <button class="btn-home" onclick="window.location.href='index.html'">Return to Home</button>
+    </div>
+
+    <script>
+        document.getElementById("admissionFormElement").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let formData = {
+                fullName: document.getElementById("name").value,
+                age: document.getElementById("age").value,
+                gender: document.getElementById("gender").value,
+                dob: document.getElementById("dob").value,
+                motherTongue: document.getElementById("motherTongue").value,
+                address: document.getElementById("address").value
+            };
+
+            // Store data in Local Storage
+            localStorage.setItem("admissionData", JSON.stringify(formData));
+
+            // Hide Form & Show Confirmation
+            document.getElementById("admissionForm").style.display = "none";
+            document.getElementById("confirmation").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
